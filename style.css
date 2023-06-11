@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+:root{
+    --orange:#ff7800;
+    --lightcolor:#666;
+    --black:#130f40;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+    text-decoration: none;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.header{
+    padding: 2rem 7%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+}
+#logo{
+    font-size: 2.5rem;
+ color: rgb(255, 255, 255);    
+}
+#logo span{
+    color: var(--orange);
+}
+.icons #menu-bars{
+    color: var(--orange);
+    font-size: 2rem;
+}
+.navbar.active{
+    left: 0;
+}
+.navbar{
+    position: absolute;
+    top: 100%;
+    background: var(--orange);
+    width: 30rem;
+    height: 100vh;
+    left: -200%;
+    transition: .5s;
+}
+.navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.background-image{
+    background: linear-gradient(rgba(2, 7, 27, 0.788),rgba(2, 7, 27, 0.788)),url(images/bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.inner-text-background{
+    text-align: center;
+}
+.inner-text-background h2{
+    color: white;
+    font-size: 30px;
+}
+.inner-text-background h1{
+    color: var(--orange);
+    font-size: 50px;
+}
+.inner-text-background h3{
+    color: white;
+    font-size: 30px;
+}
+.what-we-do{
+    padding: 5rem 7%;
+    background: var(--orange);
+}
+
+.main-we-do{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.inner-we-do{
+    flex: 1 1 45rem;
+}
+.inner-we-do img{
+    width: 40%;
+    
+}
+.we-do-image{
+    text-align: center;
+}
+.inner-we-do h1{
+    color:var(--black);
+    font-size: 40px;
+}
+.inner-we-do p{
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 25px;
+}
+.inner-we-do a{
+    padding: 2rem 4rem;
+    background: var(--black);
+    color: var(--lightcolor);
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+.our-servies{
+    padding: 3rem 7%;
+}
+.our-servies h1{
+    color: var(--black);
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.our-servies h1 span{
+    color: var(--orange);
+}
+.main-services{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.inner-services{
+    flex: 1 1 300px;
+    padding: 2rem 3rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ 
+}
+.inner-services:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+ 
+}
+.inner-services .service-icons{
+    width: 50px;
+    height: 50px;
+    background: var(--black);
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.inner-services .service-icons i{
+    color: white;
+    font-size: 1.5rem;
+
+}
+.inner-services p{
+    padding: 0 2rem;
+    font-size: 1.5rem;
+}
+.gallery{
+    padding: 3rem 7%;
+
+}
+.gallery h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 25px;
+}
+.gallery h1 span{
+    color: var(--orange);
+}
+.main-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.inner-gallery{
+   
+ 
+}
+.inner-gallery img{
+    width: 100%;
+}
+.inner-gallery img:hover{
+    transform: scale(1.1);
+}
+.container{
+    position: relative;
+    width: 100%;
+    background: #111;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container .post{
+    display: none;
+  }
+  .container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+  }
+  .container .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .container .edit:hover{
+    text-decoration: underline;
+  }
+  .container .star-widget input{
+    display: none;
+  }
+  .star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+  }
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+  }
+  input:checked ~ label{
+    color: #fd4;
+  }
+  input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+  }
+  #rate-1:checked ~ form header:before{
+    content: "I just hate it ";
+  }
+  #rate-2:checked ~ form header:before{
+    content: "I don't like it ";
+  }
+  #rate-3:checked ~ form header:before{
+    content: "It is awesome ";
+  }
+  #rate-4:checked ~ form header:before{
+    content: "I just like it ";
+  }
+  #rate-5:checked ~ form header:before{
+    content: "I just love it ";
+  }
+  .container form{
+    display: none;
+  }
+  input:checked ~ form{
+    display: block;
+  }
+  form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+  }
+  .textarea textarea:focus{
+    border-color: #444;
+  }
+  form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+  }
+  form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form .btn button:hover{
+    background: #1b1b1b;
+  }
+
+.get-in-touch{
+    padding: 4rem 7%;
+    background: #111
+}
+.get-in-touch h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.main-touch p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.touch-icons{
+    text-align: center;
+    margin-top: 20px;
+}
+.touch-icons a{
+    color: white;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    html{
+        font-size: 55%;
+    }
+    .inner-prices{
+        flex-basis: 100%;
+    }
+    .inner-we-do img{
+        width: 50%;
+        margin-top: 50px;
+        
+    }
+    .we-do-image{
+        text-align: center;
+    }
+}
